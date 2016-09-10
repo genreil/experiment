@@ -2,8 +2,10 @@
 'use strict';
 
 angular.module('DIApp', [])
+//.controller('DIController', ['$scope', '$filter', '$injector', DIController]);
+// or better:
 .controller('DIController', DIController);
-
+DIController.$inject = ['$scope', '$filter', '$injector'];
 function DIController ($scope,
                        $filter,
                        $injector) {
