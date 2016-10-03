@@ -61,8 +61,8 @@
           if (searchTerm != undefined && searchTerm != ""){
             var searchStr = searchTerm.toLowerCase();
             for(var i=0; i < result.data.menu_items.length; ++i){
-              var name = result.data.menu_items[i].name;
-              if (name.toLowerCase().indexOf(searchStr) >= 0){
+              var description = result.data.menu_items[i].description;
+              if (description.toLowerCase().indexOf(searchStr) >= 0){
                 foundItems.push(result.data.menu_items[i]);
               }
             }
