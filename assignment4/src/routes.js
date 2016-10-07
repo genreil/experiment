@@ -30,6 +30,9 @@
       templateUrl: 'src/menu/templates/items.template.html',
       controller: 'ItemsListController as itemsCtrl',
       resolve: {
+        currentShortName: ['$stateParams', function ($stateParams) {
+          return $stateParams.shortName;
+        }],
         items: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
           return MenuDataService.getItemsForCategory($stateParams.shortName);
         }]

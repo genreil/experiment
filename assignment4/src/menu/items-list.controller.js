@@ -8,11 +8,12 @@
   // resolve: {
   //   items: [...]
   // }
-  ItemsListController.$inject = ['items'];
-  function ItemsListController(items) {
+  ItemsListController.$inject = ['items', 'currentShortName'];
+  function ItemsListController(items, currentShortName) {
     var itemsList = this;
     itemsList.items = items.data.menu_items;
-    console.log("ItemsListController:", itemsList.items);
+    itemsList.currentShortName = currentShortName;
+    //console.log("ItemsListController:", itemsList.items);
   }
 
 })();

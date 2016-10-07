@@ -12,7 +12,7 @@
   function CategoriesListController(categories) {
     var catList = this;
     catList.categories = categories.data;
-    console.log("CategoriesListController:", catList.categories);
+    //console.log("CategoriesListController:", catList.categories);
   }
 
 })();

@@ -12,6 +12,7 @@ body {
   float: right;
 }
 
+ul li {list-style-type: none;}
 li[ui-sref]:hover {
   display: inline-block;
   cursor: pointer;

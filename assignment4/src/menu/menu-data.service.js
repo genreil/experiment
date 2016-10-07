@@ -15,8 +15,6 @@
         url: (ApiBasePath + "/categories.json")
       });
 
-      console.log("getAllCategories:", response);
-
       return response;
     };
 
