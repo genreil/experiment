@@ -1,3 +1,18 @@
 <div id="main-content" class="container">
-	Not Signed Up Yet. <a ui-sref="public.signup" style="color: white;"><u>Sign up Now!</u></a>
+	<fieldset>
+		<legend>Info</legend>
+		<div ng-if="infoCtrl.user === null">
+			Not Signed Up Yet. <a ui-sref="public.signup" style="color: white;"><u>Sign up Now!</u></a>
+		</div>
+		<div ng-if="infoCtrl.user !== null">
+			<dl class="dl-horizontal">
+				<dt>First name</dt><dd>{{ infoCtrl.user.first_name}}</dd>
+				<dt>Last name</dt><dd>{{ infoCtrl.user.last_name}}</dd>
+				<dt>Email</dt><dd>{{ infoCtrl.user.email}}</dd>
+				<dt>Phone</dt><dd>{{ infoCtrl.user.phone }}</dd>
+				<dt>Favorite dish</dt><dd>{{ infoCtrl.user.menu_item.name }}</dd>
+			</dl>
+			<menu-item menu-item="infoCtrl.user.menu_item"></menu-item>
+		</div>
+	</fieldset>
 </div>

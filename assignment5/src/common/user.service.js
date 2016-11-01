@@ -6,16 +6,15 @@
 
   function UserService() {
     var service = this;
-    var users = {};
+    var user = null;
 
-    service.storeUser = function(user){
-      users[user.email] = user;
+    service.storeUser = function(new_user){
+      user = new_user;
     }
 
-    service.findUser = function (email){
-      return users[email];
+    service.getUser = function(){
+      return user;
     }
-
   }
 
 })();
